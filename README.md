@@ -41,12 +41,19 @@ However, the remaining flip-flops should be made ready to toggle only when all l
  
 ### Developed by: GOWRISANKAR P
 ### RegisterNumber: 212222230041  
-
-
-![328827668-5d109724-4c8f-4cd4-9338-9e45d4b70dce](https://github.com/Roshini2201/SYNCHRONOUS-UP-COUNTER/assets/154105318/bc5af006-fde5-4128-8b82-cab6f6f9f023)
-
-
-
+```
+module synchronous(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(!rstn)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 **RTL LOGIC UP COUNTER**
 
 
